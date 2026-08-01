@@ -10,7 +10,6 @@ function ProductList() {
     const [showCart, setShowCart] = useState(false);
     const [addedToCart, setAddedToCart] = useState({});
 
-    // Sincronizar el estado local addedToCart según los elementos presentes en Redux
     useEffect(() => {
         const updatedAddedToCart = {};
         cartItems.forEach(item => {
@@ -19,7 +18,6 @@ function ProductList() {
         setAddedToCart(updatedAddedToCart);
     }, [cartItems]);
 
-    // Calcular el número total de artículos en el carrito para el icono de la Navbar
     const calculateTotalQuantity = () => {
         return cartItems ? cartItems.reduce((total, item) => total + item.quantity, 0) : 0;
     };
@@ -70,13 +68,13 @@ function ProductList() {
             plants: [
                 {
                     name: "Lavender",
-                    image: "https://images.unsplash.com/photo-1611909023032-2d6b3134ecba?q=80&w=1000&auto=format&fit=crop",
+                    image: "https://cdn.pixabay.com/photo/2020/05/17/10/32/lavender-5181106_1280.jpg",
                     description: "Calming scent, helps reduce stress.",
                     cost: "20"
                 },
                 {
                     name: "Jasmine",
-                    image: "https://images.unsplash.com/photo-1592729808999-652d3a042971?q=80&w=1000&auto=format&fit=crop",
+                    image: "https://cdn.pixabay.com/photo/2018/01/18/19/22/jasmine-3091008_1280.jpg",
                     description: "Sweet fragrance, promotes relaxation.",
                     cost: "18"
                 }
@@ -103,7 +101,7 @@ function ProductList() {
 
     return (
         <div>
-            {/* Navbar principal */}
+            {/* Navbar */}
             <div className="navbar" style={{ backgroundColor: '#4CAF50', color: '#fff', padding: '15px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <div className="tag">
                     <div className="luxury">
@@ -136,7 +134,7 @@ function ProductList() {
                 </div>
             </div>
 
-            {/* Alternar entre el catálogo de plantas y el carrito de compras */}
+            {/* Vista de productos / carrito */}
             {!showCart ? (
                 <div className="product-grid">
                     {plantsArray.map((category, index) => (
@@ -152,9 +150,10 @@ function ProductList() {
                                         <div className="product-description">{plant.description}</div>
                                         <div className="product-cost">${plant.cost}</div>
                                         <button
-                                            className="product-button"
+                                            className={`product-button ${addedToCart[plant.name] ? 'disabled' : ''}`}
                                             onClick={() => handleAddToCart(plant)}
                                             disabled={addedToCart[plant.name]}
+                                            style={addedToCart[plant.name] ? { backgroundColor: '#cccccc', color: '#666666', cursor: 'not-allowed', border: '1px solid #bbbbbb' } : {}}
                                         >
                                             {addedToCart[plant.name] ? "Added to Cart" : "Add to Cart"}
                                         </button>
