@@ -51,19 +51,19 @@ function ProductList() {
             plants: [
                 {
                     name: "Snake Plant",
-                    image: "https://cdn.pixabay.com/photo/2021/01/22/06/04/snake-plant-5939187_1280.jpg",
+                    image: "https://images.unsplash.com/photo-1593482892290-f54927ae1bac?w=500&auto=format&fit=crop",
                     description: "Produces oxygen at night, improving air quality.",
                     cost: "$15"
                 },
                 {
                     name: "Spider Plant",
-                    image: "https://cdn.pixabay.com/photo/2018/07/11/06/47/chlorophytum-3530413_1280.jpg",
+                    image: "https://images.unsplash.com/photo-1572688484438-313a6e50c333?w=500&auto=format&fit=crop",
                     description: "Filters formaldehyde and xylene from the air.",
                     cost: "$12"
                 },
                 {
                     name: "Peace Lily",
-                    image: "https://cdn.pixabay.com/photo/2019/06/12/14/14/peace-lily-4269365_1280.jpg",
+                    image: "https://images.unsplash.com/photo-1593691509543-c55fb32e7355?w=500&auto=format&fit=crop",
                     description: "Removes mold spores and purifies the air.",
                     cost: "$18"
                 }
@@ -74,19 +74,19 @@ function ProductList() {
             plants: [
                 {
                     name: "Lavender",
-                    image: "https://cdn.pixabay.com/photo/2017/07/18/18/24/lavender-2516600_1280.jpg",
+                    image: "https://images.unsplash.com/photo-1528183429752-a97d0bf99b5a?w=500&auto=format&fit=crop",
                     description: "Calming scent, helps reduce stress.",
                     cost: "$20"
                 },
                 {
                     name: "Jasmine",
-                    image: "https://cdn.pixabay.com/photo/2014/08/17/18/08/jasmine-420235_1280.jpg",
+                    image: "https://images.unsplash.com/photo-1534710961216-75c88202f43e?w=500&auto=format&fit=crop",
                     description: "Sweet fragrance, promotes relaxation.",
                     cost: "$18"
                 },
                 {
                     name: "Rosemary",
-                    image: "https://cdn.pixabay.com/photo/2019/10/11/07/12/rosemary-4541241_1280.jpg",
+                    image: "https://images.unsplash.com/photo-1515586000433-45406d8e6662?w=500&auto=format&fit=crop",
                     description: "Invigorating aroma, enhances focus.",
                     cost: "$15"
                 }
@@ -97,19 +97,19 @@ function ProductList() {
             plants: [
                 {
                     name: "Aloe Vera",
-                    image: "https://cdn.pixabay.com/photo/2018/04/02/07/42/aloe-vera-3283083_1280.jpg",
+                    image: "https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?w=500&auto=format&fit=crop",
                     description: "Soothes burns and skin irritation.",
                     cost: "$14"
                 },
                 {
                     name: "Echinacea",
-                    image: "https://cdn.pixabay.com/photo/2014/12/11/20/02/echinacea-564700_1280.jpg",
+                    image: "https://images.unsplash.com/photo-1603912699214-92627f304eb6?w=500&auto=format&fit=crop",
                     description: "Boosts immune system function.",
                     cost: "$16"
                 },
                 {
                     name: "Peppermint",
-                    image: "https://cdn.pixabay.com/photo/2017/07/12/12/23/peppermint-2496773_1280.jpg",
+                    image: "https://images.unsplash.com/photo-1628556270448-4d4e4148e1b1?w=500&auto=format&fit=crop",
                     description: "Helps with digestion and relieves headaches.",
                     cost: "$13"
                 }
