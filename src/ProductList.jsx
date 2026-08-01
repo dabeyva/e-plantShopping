@@ -45,26 +45,25 @@ function ProductList() {
         setShowCart(false);
     };
 
-    // Estructura y URLs exactas de la plantilla original del laboratorio
     const plantsArray = [
         {
             category: "Air Purifying Plants",
             plants: [
                 {
                     name: "Snake Plant",
-                    image: "https://cdn.pixabay.com/photo/2021/01/22/06/04/snake-plant-5939187_1280.jpg",
+                    image: "https://images.pexels.com/photos/2123482/pexels-photo-2123482.jpeg?auto=compress&cs=tinysrgb&w=600",
                     description: "Produces oxygen at night, improving air quality.",
                     cost: "$15"
                 },
                 {
                     name: "Spider Plant",
-                    image: "https://cdn.pixabay.com/photo/2018/07/11/06/47/chlorophytum-3530413_1280.jpg",
+                    image: "https://images.pexels.com/photos/1470171/pexels-photo-1470171.jpeg?auto=compress&cs=tinysrgb&w=600",
                     description: "Filters formaldehyde and xylene from the air.",
                     cost: "$12"
                 },
                 {
                     name: "Peace Lily",
-                    image: "https://cdn.pixabay.com/photo/2019/06/12/14/14/peace-lily-4269365_1280.jpg",
+                    image: "https://images.pexels.com/photos/4505171/pexels-photo-4505171.jpeg?auto=compress&cs=tinysrgb&w=600",
                     description: "Removes mold spores and purifies the air.",
                     cost: "$18"
                 }
@@ -75,19 +74,19 @@ function ProductList() {
             plants: [
                 {
                     name: "Lavender",
-                    image: "https://images.unsplash.com/photo-1611909023032-2d6b3134ecba?q=80&w=1000&auto=format&fit=crop",
+                    image: "https://images.pexels.com/photos/1166868/pexels-photo-1166868.jpeg?auto=compress&cs=tinysrgb&w=600",
                     description: "Calming scent, helps reduce stress.",
                     cost: "$20"
                 },
                 {
                     name: "Jasmine",
-                    image: "https://images.unsplash.com/photo-1592729808999-652d3a042971?q=80&w=1000&auto=format&fit=crop",
+                    image: "https://images.pexels.com/photos/808522/pexels-photo-808522.jpeg?auto=compress&cs=tinysrgb&w=600",
                     description: "Sweet fragrance, promotes relaxation.",
                     cost: "$18"
                 },
                 {
                     name: "Rosemary",
-                    image: "https://cdn.pixabay.com/photo/2019/10/11/07/12/rosemary-4541241_1280.jpg",
+                    image: "https://images.pexels.com/photos/4198139/pexels-photo-4198139.jpeg?auto=compress&cs=tinysrgb&w=600",
                     description: "Invigorating aroma, enhances focus.",
                     cost: "$15"
                 }
@@ -98,19 +97,19 @@ function ProductList() {
             plants: [
                 {
                     name: "Aloe Vera",
-                    image: "https://cdn.pixabay.com/photo/2018/04/02/07/42/aloe-vera-3283083_1280.jpg",
+                    image: "https://images.pexels.com/photos/1084188/pexels-photo-1084188.jpeg?auto=compress&cs=tinysrgb&w=600",
                     description: "Soothes burns and skin irritation.",
                     cost: "$14"
                 },
                 {
                     name: "Echinacea",
-                    image: "https://cdn.pixabay.com/photo/2014/12/11/20/02/echinacea-564700_1280.jpg",
+                    image: "https://images.pexels.com/photos/1263986/pexels-photo-1263986.jpeg?auto=compress&cs=tinysrgb&w=600",
                     description: "Boosts immune system function.",
                     cost: "$16"
                 },
                 {
                     name: "Peppermint",
-                    image: "https://cdn.pixabay.com/photo/2017/07/12/12/23/peppermint-2496773_1280.jpg",
+                    image: "https://images.pexels.com/photos/1264000/pexels-photo-1264000.jpeg?auto=compress&cs=tinysrgb&w=600",
                     description: "Helps with digestion and relieves headaches.",
                     cost: "$13"
                 }
@@ -124,7 +123,7 @@ function ProductList() {
             <div className="navbar" style={{ backgroundColor: '#4CAF50', color: '#fff', padding: '15px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <div className="tag">
                     <div className="luxury">
-                        <img src="https://cdn.pixabay.com/photo/2020/08/05/13/12/eco-5465432_1280.png" alt="" style={{ height: '50px', width: '50px' }} />
+                        <img src="https://images.pexels.com/photos/1084188/pexels-photo-1084188.jpeg?auto=compress&cs=tinysrgb&w=100" alt="" style={{ height: '50px', width: '50px', borderRadius: '50%' }} />
                         <a href="/" style={{ color: 'white', textDecoration: 'none', fontSize: '20px', fontWeight: 'bold' }}>
                             <div>
                                 <h3 style={{ color: 'white', margin: 0 }}>Paradise Nursery</h3>
@@ -164,13 +163,7 @@ function ProductList() {
                             <div className="product-list">
                                 {category.plants.map((plant, plantIndex) => (
                                     <div className="product-card" key={plantIndex}>
-                                        <img 
-                                            className="product-image" 
-                                            src={plant.image} 
-                                            alt={plant.name}
-                                            referrerPolicy="no-referrer"
-                                            crossOrigin="anonymous"
-                                        />
+                                        <img className="product-image" src={plant.image} alt={plant.name} />
                                         <div className="product-title">{plant.name}</div>
                                         <div className="product-description">{plant.description}</div>
                                         <div className="product-cost">{plant.cost}</div>
