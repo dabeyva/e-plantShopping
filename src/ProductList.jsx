@@ -53,13 +53,19 @@ function ProductList() {
                     name: "Snake Plant",
                     image: "https://cdn.pixabay.com/photo/2021/01/22/06/04/snake-plant-5939187_1280.jpg",
                     description: "Produces oxygen at night, improving air quality.",
-                    cost: "15"
+                    cost: "$15"
                 },
                 {
                     name: "Spider Plant",
                     image: "https://cdn.pixabay.com/photo/2018/07/11/06/47/chlorophytum-3530413_1280.jpg",
                     description: "Filters formaldehyde and xylene from the air.",
-                    cost: "12"
+                    cost: "$12"
+                },
+                {
+                    name: "Peace Lily",
+                    image: "https://cdn.pixabay.com/photo/2019/06/12/14/14/peace-lily-4269365_1280.jpg",
+                    description: "Removes mold spores and purifies the air.",
+                    cost: "$18"
                 }
             ]
         },
@@ -68,15 +74,21 @@ function ProductList() {
             plants: [
                 {
                     name: "Lavender",
-                    image: "https://cdn.pixabay.com/photo/2020/05/17/10/32/lavender-5181106_1280.jpg",
+                    image: "https://cdn.pixabay.com/photo/2017/07/18/18/24/lavender-2516600_1280.jpg",
                     description: "Calming scent, helps reduce stress.",
-                    cost: "20"
+                    cost: "$20"
                 },
                 {
                     name: "Jasmine",
-                    image: "https://cdn.pixabay.com/photo/2018/01/18/19/22/jasmine-3091008_1280.jpg",
+                    image: "https://cdn.pixabay.com/photo/2014/08/17/18/08/jasmine-420235_1280.jpg",
                     description: "Sweet fragrance, promotes relaxation.",
-                    cost: "18"
+                    cost: "$18"
+                },
+                {
+                    name: "Rosemary",
+                    image: "https://cdn.pixabay.com/photo/2019/10/11/07/12/rosemary-4541241_1280.jpg",
+                    description: "Invigorating aroma, enhances focus.",
+                    cost: "$15"
                 }
             ]
         },
@@ -87,13 +99,19 @@ function ProductList() {
                     name: "Aloe Vera",
                     image: "https://cdn.pixabay.com/photo/2018/04/02/07/42/aloe-vera-3283083_1280.jpg",
                     description: "Soothes burns and skin irritation.",
-                    cost: "14"
+                    cost: "$14"
                 },
                 {
                     name: "Echinacea",
                     image: "https://cdn.pixabay.com/photo/2014/12/11/20/02/echinacea-564700_1280.jpg",
                     description: "Boosts immune system function.",
-                    cost: "16"
+                    cost: "$16"
+                },
+                {
+                    name: "Peppermint",
+                    image: "https://cdn.pixabay.com/photo/2017/07/12/12/23/peppermint-2496773_1280.jpg",
+                    description: "Helps with digestion and relieves headaches.",
+                    cost: "$13"
                 }
             ]
         }
@@ -134,7 +152,7 @@ function ProductList() {
                 </div>
             </div>
 
-            {/* Vista de productos / carrito */}
+            {/* Product Grid */}
             {!showCart ? (
                 <div className="product-grid">
                     {plantsArray.map((category, index) => (
@@ -148,12 +166,11 @@ function ProductList() {
                                         <img className="product-image" src={plant.image} alt={plant.name} />
                                         <div className="product-title">{plant.name}</div>
                                         <div className="product-description">{plant.description}</div>
-                                        <div className="product-cost">${plant.cost}</div>
+                                        <div className="product-cost">{plant.cost}</div>
                                         <button
-                                            className={`product-button ${addedToCart[plant.name] ? 'disabled' : ''}`}
+                                            className="product-button"
                                             onClick={() => handleAddToCart(plant)}
                                             disabled={addedToCart[plant.name]}
-                                            style={addedToCart[plant.name] ? { backgroundColor: '#cccccc', color: '#666666', cursor: 'not-allowed', border: '1px solid #bbbbbb' } : {}}
                                         >
                                             {addedToCart[plant.name] ? "Added to Cart" : "Add to Cart"}
                                         </button>
